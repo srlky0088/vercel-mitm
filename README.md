@@ -1,5 +1,7 @@
 # vercel-mitm
+
 A man-in-the-middle (MITM) proxy using Vercel Serverless Functions &amp; Node.js to bypass restrictions. Includes server (deployable on Vercel) and local client proxy compatible with V2Ray/Clash.
+
 <div dir="rtl" align="right">
 
 # راهنمای نصب و راه‌اندازی
@@ -20,13 +22,19 @@ A man-in-the-middle (MITM) proxy using Vercel Serverless Functions &amp; Node.js
 1. ابتدا به سایت [vercel.com](https://vercel.com) بروید و لاگین کنید.
 2. پوشه `server` را در سیستم خود باز کنید.
 3. در نوار آدرس بالای فایل اکسپلورر، کلمه `cmd` را تایپ کرده و اینتر بزنید تا محیط کامند لاین باز شود.
-4. دستور زیر را وارد کنید:
+4. دستور زیر را وارد کنید تا cli ورسل نصب شود:
+
+   ```bash
+   npm i -g vercel
+   ```
+
+5. سپس دستور زیر رو برای لاگین در ورسل وارد کنید:
 
    ```bash
    vercel login
    ```
 
-5. در صفحه مرورگری که باز می‌شود، روی دکمه سیاه‌رنگ **Allow** کلیک کنید.
+6. در صفحه مرورگری که باز می‌شود، روی دکمه سیاه‌رنگ **Allow** کلیک کنید.
 
 ### ۲. دیپلوی سرور روی Vercel
 
@@ -52,14 +60,18 @@ A man-in-the-middle (MITM) proxy using Vercel Serverless Functions &amp; Node.js
 ### ۴. ساخت و نصب گواهی SSL
 
 1. در نوار آدرس بالای پوشه کلاینت، کلمه `cmd` را تایپ کرده و اینتر بزنید.
-2. دستور زیر را اجرا کنید:
+2. دستور زیر رو اجرا کنید برای نصب کتابخانه های مورد نیاز:
+   ```bash
+   npm install
+   ```
+3. دستور زیر رو وارد کنید برای اجرای برنامه:
    ```bash
    npm start
    ```
-3. پس از اجرا، دو فایل گواهی در پوشه ساخته می‌شوند. روی فایل `ca.crt` کلیک راست کرده و گزینه **Install certificate** را انتخاب کنید.
-4. در پنجره باز شده یک‌بار **Next** را بزنید.
-5. در صفحه بعد، گزینه **Place all certificate in the following store** را انتخاب کرده و روی **Browse** کلیک کنید.
-6. در پنجره باز شده، گزینه **Trusted Root Certification Authorities** را انتخاب کرده و **OK** را بزنید.
+4. پس از اجرا، دو فایل گواهی در پوشه ساخته می‌شوند. روی فایل `ca.crt` کلیک راست کرده و گزینه **Install certificate** را انتخاب کنید.
+5. در پنجره باز شده یک‌بار **Next** را بزنید.
+6. در صفحه بعد، گزینه **Place all certificate in the following store** را انتخاب کرده و روی **Browse** کلیک کنید.
+7. در پنجره باز شده، گزینه **Trusted Root Certification Authorities** را انتخاب کرده و **OK** را بزنید.
    7.در مراحل بعدی نیز با زدن **Finish** به نصب گواهی خاتمه دهید
 
 ### ۵. اجرای پروکسی و اتصال
